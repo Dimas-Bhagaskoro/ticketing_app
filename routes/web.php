@@ -46,6 +46,11 @@ Route::middleware('auth')->group(function () {
             ->name('histories.show');
     });
 
+    Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('payment-types', \App\Http\Controllers\Admin\PaymentTypeController::class);
+});
+
+    
 });
 
 require __DIR__.'/auth.php';

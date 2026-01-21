@@ -50,8 +50,14 @@
                     <span class="is-drawer-close:hidden">History Pembelian</span>
                 </a>
             </li>
+            <!-- Management Payment -->
+            <li class="{{ request()->routeIs('admin.payment-types.*') ? 'bg-gray-200 rounded-lg' : '' }}">
+        <a href="{{ route('admin.payment-types.index') }}">
+                    💳 Manajemen Pembayaran
+                </a>
+            </li>
         </ul>
-
+            
         <!-- logout -->
         <div class="w-full p-4">
             <form action="{{ route('logout') }}" method="POST">
