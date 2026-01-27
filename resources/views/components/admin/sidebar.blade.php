@@ -2,7 +2,7 @@
     <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
     <div class="flex min-h-full flex-col items-start bg-base-200 w-64 is-drawer-close:w-14 is-drawer-open:w-80">
         <div class="w-full flex items-center justify-center p-4">
-            <img src="{{ asset('assets/images/logo_bengkod.svg') }}" alt="Logo">
+            <img src="{{ asset('assets/logo_bengkod.png') }}" alt="Logo">
         </div>
 
         <!-- Sidebar content here -->
@@ -55,6 +55,12 @@
         <a href="{{ route('admin.payment-types.index') }}">
                     💳 Manajemen Pembayaran
                 </a>
+            </li>
+            <!-- Management Ticket Types -->
+            <li class="{{ request()->routeIs('admin.ticket-types.*') ? 'bg-gray-200 rounded-lg' : '' }}">
+            <a href="{{ route('admin.ticket-types.index') }}">
+        🎟️ Manajemen Tiket
+            </a>
             </li>
         </ul>
             
